@@ -1,19 +1,17 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import Ahri from '../models/Ahri'
 import { Physics } from 'use-cannon'
 import Ground from '../common/Ground'
-import { Player } from '../common/Player'
-import DanceStage from '../models/DanceStage'
-import { Swarm } from '../effects/Swarm'
-import CollisionWall from '../common/CollisionWall'
-import Ahri from '../models/Ahri'
-import { useAudio } from '../../hooks/useAudo'
-import { Environment, Html, PerspectiveCamera, PositionalAudio } from '@react-three/drei'
-import { Bloom, DepthOfField, EffectComposer, Noise } from '@react-three/postprocessing'
-import * as THREE from 'THREE'
+import { Html } from '@react-three/drei'
 import { Sound } from '../common/Sound'
 import { Video } from '../common/Video'
+import { Swarm } from '../effects/Swarm'
+import { Player } from '../common/Player'
+import DanceStage from '../models/DanceStage'
+import CollisionWall from '../common/CollisionWall'
+import { Bloom, DepthOfField, EffectComposer, Noise } from '@react-three/postprocessing'
 
-const DanceStageScene = () => {
+const MainScene = () => {
     const [show, setShow] = useState(false)
 
     return (
@@ -23,10 +21,10 @@ const DanceStageScene = () => {
                 {!show && (
                     <>
                         <button
-                            className="px-10 py-2 pb-4 lg:text-6xl text-3xl  text-white border-[1px] font-thin border-white rounded-sm hover:scale-105 transition-all ease-out"
+                            className="px-11 py-3 pb-4 lg:pb-5 lg:text-6xl text-3xl  text-white border-[1px] font-thin border-white rounded-sm hover:scale-105 transition-all ease-out"
                             onClick={() => setShow(true)}
                         >
-                            Enter Show
+                            ENTER SCENE
                         </button>
                         <p className="mt-2 text-xs text-center text-white lg:mt-4">controls: </p>
                         <p className="mt-1 text-xs text-center text-white ">w, a, s, d, shift and space</p>
@@ -65,4 +63,4 @@ const DanceStageScene = () => {
     )
 }
 
-export default DanceStageScene
+export default MainScene

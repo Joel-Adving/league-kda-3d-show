@@ -1,17 +1,17 @@
 import { Canvas } from '@react-three/fiber'
 import type { NextPage } from 'next'
 import { Suspense } from 'react'
-import DanceStageScene from '../components/scenes/DanceStageScene'
+import MainScene from '../components/scenes/MainScene'
 
 const Home: NextPage = () => {
     return (
-        <>
-            <Canvas className="min-h-screen bg-black" shadows>
+        <div className="max-h-screen overflow-y-hidden ">
+            <Canvas className="min-h-screen bg-black " shadows>
                 <Suspense fallback={null}>
-                    <DanceStageScene />
+                    <MainScene />
                 </Suspense>
             </Canvas>
-        </>
+        </div>
     )
 }
 
