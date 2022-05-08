@@ -1,6 +1,14 @@
-# KDA 3D performance from League of Legends made with Three.js
+# 3D - KDA - League of Legends - performance made with Three.js
 
-First, run the development server:
+First, install dependencies
+
+```bash
+npm i
+# or
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
