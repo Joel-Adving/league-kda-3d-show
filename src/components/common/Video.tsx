@@ -10,18 +10,20 @@ interface Props {
 export function Video({ url }: Props) {
     const size = useAspect(2000, 800)
     const { toggle } = useAudio('/kda-song.mp3')
+
     const [video] = useState(() =>
         Object.assign(document.createElement('video'), {
             src: url,
             crossOrigin: 'Anonymous',
             loop: true,
             muted: true,
-            preload: 'auto',
+            preload: 'metadata',
         })
     )
+
     useEffect(() => {
         video.play()
-        toggle()
+        video.onplaying = () => toggle()
     }, [video])
     return (
         <mesh scale={size} position={[0, 24, -35]} rotation={[-Math.PI * 2, 0, 0]}>

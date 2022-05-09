@@ -2,7 +2,7 @@ import { Suspense, useState } from 'react'
 import Ahri from '../models/Ahri'
 import { Physics } from 'use-cannon'
 import Ground from '../common/Ground'
-import { Html, OrbitControls } from '@react-three/drei'
+import { CameraShake, Html, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Sound } from '../common/Sound'
 import { Video } from '../common/Video'
 import { Particles } from '../effects/Particles'
@@ -63,10 +63,11 @@ const MainScene = () => {
                     {width <= 768 && (
                         <>
                             <OrbitControls
-                                maxPolarAngle={Math.PI / 1.88}
+                                maxPolarAngle={Math.PI / 1.86}
                                 maxDistance={8.5}
                                 minDistance={2.5}
                                 target={[0, 1.1, 0.3]}
+                                enablePan={false}
                             />
                         </>
                     )}
