@@ -24,8 +24,6 @@ export function Sound({ url }: Props) {
     return (
         <mesh position={[0, 2, -9]}>
             <positionalAudio ref={sound} args={[listener]} />
-            {/* <sphereBufferGeometry args={[1, 32, 16]} />
-            <meshPhongMaterial color={'hotpink'} /> */}
         </mesh>
     )
 }

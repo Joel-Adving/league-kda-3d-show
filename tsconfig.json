@@ -22,7 +22,7 @@
         "src/utils/FPVControls.js",
         "src/components/effects/Waterpass.ts",
         "src/components/effects/Swarm.jsx",
-        "src/components/effects/Swarm.js",
+        "src/components/effects/Particles.js",
         "src/components/effects/Effect.js"
     ],
     "exclude": ["node_modules"]

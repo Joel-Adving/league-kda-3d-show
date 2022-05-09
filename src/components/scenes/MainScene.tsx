@@ -2,10 +2,10 @@ import { useState } from 'react'
 import Ahri from '../models/Ahri'
 import { Physics } from 'use-cannon'
 import Ground from '../common/Ground'
-import { Html, OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { Html, OrbitControls } from '@react-three/drei'
 import { Sound } from '../common/Sound'
 import { Video } from '../common/Video'
-import { Swarm } from '../effects/Swarm'
+import { Particles } from '../effects/Particles'
 import { Player } from '../common/Player'
 import DanceStage from '../models/DanceStage'
 import CollisionWall from '../common/CollisionWall'
@@ -49,7 +49,7 @@ const MainScene = () => {
                 <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} opacity={3} />
                 <Noise opacity={0.01} />
             </EffectComposer>
-            <Swarm count={10000} />
+            <Particles count={10000} />
             <ambientLight intensity={0.1} />
             <spotLight position={[0, 0.7, 1.4]} intensity={2} penumbra={1} castShadow />
             <spotLight position={[0, 3, 1.2]} intensity={1} penumbra={0.4} castShadow />
