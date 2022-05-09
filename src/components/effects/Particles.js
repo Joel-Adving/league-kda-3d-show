@@ -4,7 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 
 const PARTICLE_SPEED = 0.001
 
-export function Particles({ count }) {
+export function Particles({ count, particleSize = 0.04 }) {
     const mesh = useRef()
     const { size, viewport } = useThree()
     const aspect = size.width / viewport.width
@@ -46,7 +46,7 @@ export function Particles({ count }) {
     return (
         <>
             <instancedMesh ref={mesh} args={[null, null, count]}>
-                <sphereBufferGeometry args={[0.04, 10, 10]} />
+                <sphereBufferGeometry args={[particleSize, 10, 10]} />
                 <meshStandardMaterial color="white" />
             </instancedMesh>
         </>

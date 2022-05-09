@@ -16,7 +16,7 @@ export function Sound({ url }: Props) {
         sound.current.setBuffer(buffer)
         sound.current.setRefDistance(0.6)
         sound.current.setLoop(true)
-        sound.current.setVolume(40)
+        sound.current.setVolume(10)
         setInterval(() => sound.current.play(), 300)
         camera.add(listener)
         return () => camera.remove(listener)

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import Ahri from '../models/Ahri'
 import { Physics } from 'use-cannon'
 import Ground from '../common/Ground'
@@ -19,7 +19,7 @@ const MainScene = () => {
 
     const handleClick = async () => {
         setShow(true)
-        await wait(156000)
+        await wait(153500)
         window.location.reload()
     }
 
@@ -30,8 +30,8 @@ const MainScene = () => {
                 {!show && (
                     <>
                         <button
-                            className="px-11 py-3 pb-4 lg:pb-5 lg:text-6xl text-3xl  text-white border-[1px] font-thin border-white rounded-sm hover:scale-105 transition-all ease-out"
                             onClick={handleClick}
+                            className=" p-4 lg:pt-2 lg:text-5xl text-3xl  text-white border-[1px] font-thin border-white rounded-sm hover:scale-105 transition-all ease-out"
                         >
                             BEGIN SHOW
                         </button>
@@ -45,7 +45,7 @@ const MainScene = () => {
                 )}
             </Html>
             <EffectComposer multisampling={0} disableNormalPass={true}>
-                <DepthOfField focusDistance={0} focalLength={0.05} bokehScale={2} height={480} />
+                <DepthOfField focusDistance={0} focalLength={0.1} bokehScale={2} height={480} />
                 <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} opacity={3} />
                 <Noise opacity={0.01} />
             </EffectComposer>
@@ -56,9 +56,8 @@ const MainScene = () => {
             <hemisphereLight args={['#6608ff', '#ff03b3']} />
 
             {show && (
-                <>
-                    <Video url="/compressed-kda-video.mp4" />
-                    <Sound url="/kda-bass-boosted.mp3" />
+                <Suspense fallback={null}>
+                    <Video url="/kda-video-compressed.mp4" />
                     <DanceStage position={[0, -15.14, 2]} rotation={[0, -Math.PI * 0.5, 0]} />
                     <Ahri scale={0.03} />
                     {width <= 768 && (
@@ -80,7 +79,7 @@ const MainScene = () => {
                         <CollisionWall args={[0, 0]} position={[30, 0, 10]} rotation={[0, -Math.PI * 0.5, 0]} />
                         <CollisionWall args={[0, 0]} position={[-30, 0, 10]} rotation={[0, -Math.PI * 1.5, 0]} />
                     </Physics>
-                </>
+                </Suspense>
             )}
         </>
     )
