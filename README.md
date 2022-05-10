@@ -4,7 +4,7 @@ Live demo: https://league-kda-3d-show.vercel.app/
 
 Song: K/DA - K/DA - POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns) https://www.youtube.com/watch?v=UOxkGD8qRB4
 
-## 3D Models used:
+## 3D Models used
 
 "League Of Legends - Ahri KDA" (https://sketchfab.com/3d-models/league-of-legends-ahri-kda-e62a32f688364cd697c4d1e1bc101532) by 1FENIL (https://sketchfab.com/1FENIL) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 
