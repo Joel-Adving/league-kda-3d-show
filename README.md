@@ -2,7 +2,7 @@
 
 Live demo: https://league-kda-3d-show.vercel.app/
 
-Song: K/DA - POP/STARS https://www.youtube.com/watch?v=UOxkGD8qRB4
+Song: K/DA - K/DA - POP/STARS (ft. Madison Beer, (G)I-DLE, Jaira Burns) | Music Video - League of Legends https://www.youtube.com/watch?v=UOxkGD8qRB4
 
 ## 3D Models used:
 
