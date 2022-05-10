@@ -1,8 +1,8 @@
-## 3D - League of Legends - KDA - performance made with Three.js
+## 3D - K/DA POP/STARS - League of Legends - made with Three.js
 
 Live demo: https://league-kda-3d-show.vercel.app/
 
-Song: https://www.youtube.com/watch?v=UOxkGD8qRB4
+Song: K/DA - POP/STARS https://www.youtube.com/watch?v=UOxkGD8qRB4
 
 ## 3D Models used:
 
