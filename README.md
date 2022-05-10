@@ -1,24 +1,8 @@
-# 3D - League of Legends - KDA - performance made with Three.js
+## 3D - League of Legends - KDA - performance made with Three.js
 
-## https://league-kda-3d-show.vercel.app/
+Live demo: https://league-kda-3d-show.vercel.app/
 
-First, install dependencies
-
-```bash
-npm i
-# or
-yarn
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Song: https://www.youtube.com/watch?v=UOxkGD8qRB4
 
 ## 3D Models used:
 
