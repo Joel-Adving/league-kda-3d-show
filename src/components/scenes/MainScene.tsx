@@ -14,14 +14,8 @@ import { wait } from '../../utils/helpers'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 
 const MainScene = () => {
-    const [show, setShow] = useState(false)
     const { width } = useWindowDimensions()
-
-    const handleClick = async () => {
-        setShow(true)
-        await wait(153500)
-        window.location.reload()
-    }
+    const [show, setShow] = useState(false)
 
     return (
         <>
@@ -30,7 +24,7 @@ const MainScene = () => {
                 {!show && (
                     <>
                         <button
-                            onClick={handleClick}
+                            onClick={() => setShow(true)}
                             className=" p-4 lg:pt-2 lg:text-5xl text-3xl  text-white border-[1px] font-thin border-white rounded-sm hover:scale-105 transition-all ease-out"
                         >
                             BEGIN SHOW

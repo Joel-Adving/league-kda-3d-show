@@ -7,14 +7,14 @@ export const useAudio = (url: string) => {
     const toggle = () => setPlaying(!playing)
 
     useEffect(() => {
-        if (audio) {
-            playing ? audio.play() : audio.pause()
-            audio.volume = 0.1
-        }
+        if (!audio) return
+        playing ? audio.play() : audio.pause()
     }, [playing])
 
     useEffect(() => {
         if (!audio) return
+        audio.volume = 0.04
+        audio.loop = false
         audio.addEventListener('ended', () => setPlaying(false))
         return () => {
             audio.removeEventListener('ended', () => setPlaying(false))
