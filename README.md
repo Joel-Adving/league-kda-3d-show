@@ -1,4 +1,4 @@
-# 3D - KDA - League of Legends - performance made with Three.js
+# 3D - League of Legends - KDA - performance made with Three.js
 
 ## https://league-kda-3d-show.vercel.app/
 
